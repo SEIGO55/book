@@ -1,5 +1,6 @@
 import streamlit as st
 import re
+from other_script import get_additional_text  # 他のファイルから関数をインポート
 
 # サンプルテキスト
 text = '''
@@ -65,4 +66,8 @@ for line in lines:
         # 書式指定がない行はそのまま表示
         st.write(line)
 
+# 他のPythonファイルから追加のテキストを取得
+additional_text = get_additional_text()
 
+# 追加のテキストを解析して表示
+parse_and_display_text(additional_text)
