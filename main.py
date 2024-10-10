@@ -17,4 +17,3 @@ elif page == "1.1 本書の目的":
     section1_1.show()
 elif page == "2章 - データサイエンスの基礎知識":
     section2.show()
-
