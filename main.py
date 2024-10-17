@@ -396,7 +396,6 @@ st.markdown("""
 令和6年5月）""", unsafe_allow_html=True)
 
 #################################################################
-# Streamlitレイアウト
 st.markdown("---")
 
 # タイトル
@@ -404,21 +403,23 @@ st.markdown("""
 <h1 style='font-size:18px; margin-bottom: 5px;'>著作権法</h1>
 """, unsafe_allow_html=True)
 
-with st.expander("詳細を表示"):
-    # 説明文
-    st.write("""
-    Main
-    """)
-    with st.expander("詳細を表示"):
-             # 説明文2
-    st.write("""
-    Sub
-    """)
-    with st.expander("詳細を表示"):
-             # 説明文3
-    st.write("""
-    Sub
-    """)
+st.markdown("""
+<details>
+  <summary>詳細を表示</summary>
+  <p>Main content</p>
+  <details>
+    <summary>詳細を表示</summary>
+    <p>Sub content</p>
+    <details>
+      <summary>詳細を表示</summary>
+      <p>Sub sub content</p>
+    </details>
+  </details>
+</details>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+#################################################################
 
 st.markdown("---")
 #################################################################
