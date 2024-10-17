@@ -188,9 +188,9 @@ data = {
     ]
 }
 
-# DataFrameを作成
-df = pd.DataFrame(data)
-
-# Streamlitで表を表示
-st.title("生成AIに関連するリスク一覧")
-st.dataframe(df)  # または st.table(df)
+    # DataFrameを作成
+    df = pd.DataFrame(data)
+    
+    # Streamlitで表を表示
+    st.title("生成AIに関連するリスク一覧")
+    st.table(df)
