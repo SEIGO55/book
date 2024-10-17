@@ -195,7 +195,7 @@ with st.expander("詳細を表示"):
     st.title("生成AIに関連するリスク一覧")
     st.table(df)
 
-import streamlit as st
+st.markdown("---")
 
 # タイトル
 st.markdown("""
@@ -245,6 +245,7 @@ with st.expander("詳細を表示"):
 具体例: AIが生成するテキストやレポートが誤解を招かないように、分かりやすく、かつ適切なコンテキストで表現されているかを確認・修正するプロセスです。
 """, unsafe_allow_html=True)
 
+st.markdown("---")
 # タイトル
 st.markdown("""
 <h1 style='font-size:18px; margin-bottom: 5px;'>野良GPT</h1>
