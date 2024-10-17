@@ -280,7 +280,8 @@ with st.expander("詳細を表示"):
 st.markdown("""
 <h1 style='font-size:18px; margin-bottom: 5px;'>参考サイト</h1>
 """, unsafe_allow_html=True)
-    st.markdown("""
+
+st.markdown("""
 1. [経済産業省 AI事業者ガイドライン(1.0版)]
 (https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html) （更新日：
 2024年4月19日）
