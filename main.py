@@ -9,8 +9,11 @@ def plot_pie_chart():
 
     # Plotlyを使った円グラフ
     fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, hole=.3)])
-    # 高さを調整
-    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=0, b=0, l=0, r=0), height=350)
+    
+    # グラフのラベルやサイズ、マージンを調整
+    fig.update_traces(textposition='inside', textinfo='percent+label')
+    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=10, b=10, l=10, r=10), height=400)
+    
     return fig
 
 # Streamlitレイアウト
@@ -70,5 +73,6 @@ with st.expander("詳細を表示"):
     """, unsafe_allow_html=True)
     
     st.markdown("---")
+
 
 
