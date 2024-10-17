@@ -12,7 +12,7 @@ def plot_pie_chart():
     fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=0, b=0, l=0, r=0))
     return fig
 
-# Streamlitレイアウト: 1列目に円グラフ、2列目に説明を追加
+# Streamlitレイアウト
 st.markdown("---")
 
 # タイトル
@@ -22,7 +22,7 @@ st.markdown("""
 
 # 折りたたみセクションで詳細を表示
 with st.expander("詳細を表示"):
-    # 2カラムレイアウトを作成
+    # 上部2カラムレイアウトを作成
     col1, col2 = st.columns([1, 1])  # カラム幅を均等に調整
     
     # 左側に円グラフを表示
@@ -33,7 +33,7 @@ with st.expander("詳細を表示"):
     with col2:
         st.subheader("説明")
         st.markdown("""
-        <p style="font-size:12px; line-height:1.5; margin-top: 5px; margin-bottom: 5px;">
+        <p style="font-size:12px; line-height:1.5; margin-top: -10px; margin-bottom: 5px;">
         <strong>パフォーマンス: 成功の基盤 (10%)</strong><br>
         - パフォーマンスはキャリアの進展において重要であり、全体の10%を占めています。<br>
         - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br><br>
@@ -46,9 +46,9 @@ with st.expander("詳細を表示"):
         </p>
         """, unsafe_allow_html=True)
 
-    # カスタムスタイルの情報ボックス
+    # 下部に1カラムレイアウトで情報ボックスを表示
     st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 10px; margin-bottom: 0px;">
+    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 20px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
         「PIEの法則」は、キャリアを成功させるために重要な3つの要素を表すフレームワークで、
         特に外資系企業やビジネス界での出世や成功において強調されることがあります。
@@ -67,6 +67,9 @@ with st.expander("詳細を表示"):
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+
     
     st.markdown("---")
 
