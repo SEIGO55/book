@@ -275,9 +275,9 @@ with st.expander("詳細を表示"):
 「野良GPT」は、管理が不十分であるため、情報漏洩、誤情報の生成、知的財産権の侵害、セキュリティリスク、倫理的問題といった複数のリスクを抱えています。
 こうしたリスクを軽減するためには、信頼できるプラットフォームで管理されたAIモデルを使用し、適切な規制とガイドラインに従うことが重要です。
 """, unsafe_allow_html=True)
+    st.markdown("---")
 
-
-    st.markdown("""
+st.markdown("""
 <h1 style='font-size:18px; margin-bottom: 5px;'>参考サイト</h1>
 """, unsafe_allow_html=True)
     st.markdown("""
@@ -285,5 +285,3 @@ with st.expander("詳細を表示"):
 (https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html) （更新日：
 2024年4月19日）
 """)
-    
-    st.markdown("---")
