@@ -409,11 +409,12 @@ with st.expander("詳細を表示"):
     st.write("""
     Main
     """)
-        with st.expander("詳細を表示"):
+    with st.expander("詳細を表示"):
              # 説明文2
     st.write("""
     Sub
-    """)with st.expander("詳細を表示"):
+    """)
+    with st.expander("詳細を表示"):
              # 説明文3
     st.write("""
     Sub
