@@ -462,6 +462,50 @@ st.markdown("""
 </details>
 """, unsafe_allow_html=True)
 
+# タイトル
+st.markdown("""
+<h1 style='font-size:18px; margin-bottom: 5px;'>著作権法</h1>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<details>
+  <summary>詳細を表示</summary>
+  <p><strong>AIと著作権</strong></p>
+  <details>
+    <summary>1. AIと著作権についての基本的な考え方</summary>
+    <p>準備中</p>
+  </details>
+  <details>
+    <summary>2. ＡＩ開発・学習段階での著作物の利用</summary>
+    <p>準備中</p>
+  </details>
+  <details>
+    <summary>3. 法第30条の4導入の経緯</summary>
+    <p>準備中</p>
+  </details>
+  <details>
+    <summary>4. ＡＩ開発・学習段階での著作物の利用</summary>
+    <p>準備中</p>
+  </details>
+  <details>
+    <summary>5.生成・利用段階での著作物の利用</summary>
+    <p>準備中</p>
+   </details>
+   <details>
+    <summary>6.既存著作物の権利者側の対応</summary>
+    <p>準備中</p>
+   </details>
+   <details>
+    <summary>7.AI利用者側の対応</summary>
+    <p>準備中</p>
+   </details>
+   <details>
+    <summary>8.AI生成物は「著作物」に当たるか</summary>
+    <p>準備中</p>
+   </details>   
+</details>
+""", unsafe_allow_html=True)
+
 st.markdown("---")
 #################################################################
 
