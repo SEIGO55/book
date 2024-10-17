@@ -307,8 +307,8 @@ data = {
 df = pd.DataFrame(data)
 st.table(df)
 
-st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
+st.markdown("""<div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
+        <div style="font-size:12px; line-height:1.5;">
 AI事業者に向けたガイドラインでは、AI開発者、提供者、利用者が果たすべき役割や責任について説明しています。主な内容を要約すると以下の通りです。
 
 1. AI開発者 (AI Developer)
