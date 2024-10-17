@@ -508,4 +508,40 @@ st.markdown("""
 
 st.markdown("---")
 #################################################################
+import bibtexparser
+
+# BibTeX形式の文字列を直接使用
+bibtex_str = """
+@article{kamoi2024can,
+  title={When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs},
+  author={Kamoi, Ryo and Zhang, Yusen and Zhang, Nan and Han, Jiawei and Zhang, Rui},
+  journal={arXiv preprint arXiv:2406.01297},
+  year={2024}
+}
+"""
+
+# BibTeX文字列を解析する関数
+def parse_bibtex(bibtex_str):
+    bib_database = bibtexparser.loads(bibtex_str)
+    return bib_database.entries
+
+# 参考文献を整形して表示する関数
+def display_references(bib_entries):
+    for entry in bib_entries:
+        title = entry.get('title', 'No Title')
+        author = entry.get('author', 'No Author')
+        year = entry.get('year', 'No Year')
+        journal = entry.get('journal', '')
+        st.markdown(f"**{title}** ({year})  \n{author}  \n*{journal}*")
+
+# Streamlitのタイトル
+st.title("参考文献リスト")
+
+# BibTeXエントリをパース
+bib_entries = parse_bibtex(bibtex_str)
+
+# 参考文献の表示
+display_references(bib_entries)
+
+
 
