@@ -292,3 +292,17 @@ image = Image.open("AI事業者ガイドラインの位置づけ.PNG")
 
 # 画像を表示する
 st.image(image, caption="AI事業者ガイドラインの位置づけ.jpg", use_column_width=True)
+
+# データを辞書形式で作成
+data = {
+    "役割": ["AI 開発者（AI Developer）", "AI 提供者（AI Provider）", "AI 利用者（AI Business User）"],
+    "説明": [
+        "AI システムを開発する事業者。AI モデル・アルゴリズムの開発、データ収集、前処理、AI モデル学習および検証を行う。",
+        "AI システムをアプリケーション、製品、ビジネスプロセス等に組み込んでサービスを提供する事業者。AI 利用者への運用サポートも担う。",
+        "事業活動において AI システムまたは AI サービスを利用する事業者。適正な利用を行い、AI 提供者と連携しながら運用する。"
+    ]
+}
+
+# データフレームに変換
+df = pd.DataFrame(data)
+st.table(df)
