@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import plotly
 
 # PIE理論の円グラフを描画する関数
 def plot_pie_chart():
