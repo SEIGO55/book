@@ -72,7 +72,9 @@ with st.expander("詳細を表示"):
     </div>
     """, unsafe_allow_html=True)
 
-    st.subheader("参考サイト")
+    st.markdown("""
+<h1 style='font-size:18px; margin-bottom: 5px;'>参考サイト</h1>
+""", unsafe_allow_html=True)
     st.markdown("""
 1. [The Networking Institute]
 (https://thenetworkinginstitute.com/media/networking/the-pie-theory-performance-image-and-exposure-in-career-progression/) （更新日：
