@@ -307,9 +307,11 @@ data = {
 df = pd.DataFrame(data)
 st.table(df)
 
-st.markdown("""<div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
+
+st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
-AI事業者に向けたガイドラインでは、AI開発者、提供者、利用者が果たすべき役割や責任について説明しています。主な内容を要約すると以下の通りです。
+        AI事業者に向けたガイドラインでは、AI開発者、提供者、利用者が果たすべき役割や責任について説明しています。主な内容を要約すると以下の通りです。
 
 1. AI開発者 (AI Developer)
 役割: AIシステムの開発を担当し、モデルの設計、データの収集、前処理、学習、検証などを行う。
@@ -321,5 +323,6 @@ AI事業者に向けたガイドラインでは、AI開発者、提供者、利�
 役割: 事業活動でAIシステムやサービスを利用する企業。提供者と連携し、AIシステムの正常な運用を維持する役割を担う。
 目的: 適切なAIの活用を行い、環境変化などの情報を共有しながら運用する。AIが業務外の利用者に影響を与える場合、その影響を最小限に抑えるよう努める。
 このガイドラインは、AIの開発・提供・利用における適正な行動やリスク管理を促進し、安全かつ信頼性の高いAIの運用を目指しています。また、AIに伴う社会的リスクへの対策や、AIを利用する事業者が自主的にリスク管理を行うことが強調されています。
-"""</div>
-, use_column_width=True)
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
