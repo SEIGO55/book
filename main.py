@@ -9,7 +9,8 @@ def plot_pie_chart():
 
     # Plotlyを使った円グラフ
     fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, hole=.3)])
-    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=0, b=0, l=0, r=0))
+    # 高さを調整
+    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=0, b=0, l=0, r=0), height=350)
     return fig
 
 # Streamlitレイアウト
@@ -17,7 +18,7 @@ st.markdown("---")
 
 # タイトル
 st.markdown("""
-<h1 style='font-size:18px; margin-bottom: 10px;'>ハーヴィー・コールマンのPIE理論</h1>
+<h1 style='font-size:18px; margin-bottom: 5px;'>ハーヴィー・コールマンのPIE理論</h1>
 """, unsafe_allow_html=True)
 
 # 折りたたみセクションで詳細を表示
@@ -27,7 +28,7 @@ with st.expander("詳細を表示"):
     
     # 左側に円グラフを表示
     with col1:
-        st.plotly_chart(plot_pie_chart(), use_container_width=False)  # グラフの幅をカラムいっぱいに
+        st.plotly_chart(plot_pie_chart(), use_container_width=True)  # グラフの幅をカラムいっぱいに
     
     # 右側に説明を表示
     with col2:
@@ -48,7 +49,7 @@ with st.expander("詳細を表示"):
 
     # 下部に1カラムレイアウトで情報ボックスを表示
     st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 20px; margin-bottom: 0px;">
+    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 10px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
         「PIEの法則」は、キャリアを成功させるために重要な3つの要素を表すフレームワークで、
         特に外資系企業やビジネス界での出世や成功において強調されることがあります。
@@ -67,9 +68,6 @@ with st.expander("詳細を表示"):
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-
     
     st.markdown("---")
 
