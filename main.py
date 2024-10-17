@@ -1,18 +1,15 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import plotly
+import plotly.graph_objects as go
 
 # PIE理論の円グラフを描画する関数
 def plot_pie_chart():
     # PIE理論のデータ
     labels = ['パフォーマンス (10%)', 'イメージ (30%)', '露出 (60%)']
     sizes = [10, 30, 60]
-    colors = ['#ff9999','#66b3ff','#99ff99']
 
-    # 円グラフを作成
-    fig, ax = plt.subplots(figsize=(6, 6))
-    ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90, counterclock=False)
-    ax.set_title("ハーヴィー・コールマンのPIE理論")
+    # Plotlyを使った円グラフ
+    fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, hole=.3)])
+    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論")
     return fig
 
 # Streamlitレイアウト: 1列目に円グラフ、2列目に説明を追加
@@ -23,7 +20,7 @@ col1, col2 = st.columns(2)
 
 # 左側に円グラフを表示
 with col1:
-    st.pyplot(plot_pie_chart())
+    st.plotly_chart(plot_pie_chart())
 
 # 右側に説明を表示
 with col2:
@@ -41,4 +38,6 @@ with col2:
     - 露出はキャリア進展の60%を占めています。
     - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
     """)
+
+
 
