@@ -52,6 +52,6 @@ with col2:
     - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
     </p>
     """, unsafe_allow_html=True)
-
+st.markdown("---")
 
 
