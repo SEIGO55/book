@@ -13,21 +13,15 @@ def plot_pie_chart():
     return fig
 
 # Streamlitレイアウト: 1列目に円グラフ、2列目に説明を追加
-#st.title("ハーヴィー・コールマンのPIE理論")
 st.markdown("---")
 
-# Title
+# タイトル
 st.markdown("""
-<h1 style='font-size:18px;'>ハーヴィー・コールマンのPIE理論 </h1>
+<h1 style='font-size:18px;'>ハーヴィー・コールマンのPIE理論</h1>
 """, unsafe_allow_html=True)
-#st.markdown("---")
 
-# Collapsible section for main content
+# 折りたたみセクションで詳細を表示
 with st.expander("詳細を表示"):
-    # Main content text
-    st.markdown("""
-    
-    
     # 2カラムレイアウトを作成
     col1, col2 = st.columns(2)
     
@@ -42,14 +36,17 @@ with st.expander("詳細を表示"):
         <p style="font-size:12px;">
         <strong>パフォーマンス: 成功の基盤 (10%)</strong><br>
         - パフォーマンスはキャリアの進展において重要であり、全体の10%を占めています。<br>
-        - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br>
+        - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br><br>
+
         <strong>イメージ: 認識が力 (30%)</strong><br>
         - 他者からの認識がキャリアの成長に30%影響します。<br>
-        - ポジティブでプロフェッショナルなイメージを築くことが大切です。<br>
+        - ポジティブでプロフェッショナルなイメージを築くことが大切です。<br><br>
+
         <strong>露出: 能力の発揮 (60%)</strong><br>
         - 露出はキャリア進展の60%を占めています。<br>
         - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
         </p>
-        """, unsafe_allow_html=True))
+        """, unsafe_allow_html=True)
+    
     st.markdown("---")
 
