@@ -1,61 +1,49 @@
+# -------- 初期化部分 --------
 import streamlit as st
-import re
-from other_script import get_additional_text  # 他のファイルから関数をインポート
+import pandas as pd
+import random
 
-# 既存のテキスト
-text = '''
-3章 機械学習モデルの開発手順 [書式1:  章タイトル]
-3章ではいよいよモデルの開発手順について説明していきたいと思います。
+# -------- タイトル部分 --------
+## タイトルを表示
+st.title('Training Site')
 
-3.1 モデルの開発フロー [書式2:  節タイトル]
-モデルの開発フローについて説明します。Pythonでモデルを開発するフローは図1の通りです。 [書式4:  文]
-(1)データの読み込み[書式5:  文中の項目]
-まずはデータの読み込みが必要です。[書式4:  文]
-(2)データの確認[書式5:  文中の項目]
-次にデータの確認を行います。[書式4:  文]
-(3)モデル構築[書式5:  文中の項目]
-最後に予測モデルを構築します。[書式4:  文]
-'''
+# -------- タイトル部分 --------
+# Horizontal line before title
+st.markdown("---")
 
-# テキストを解析して表示する関数
-def parse_and_display_text(text):
-    # テキストを改行で分割
-    lines = text.strip().split('\n')
+# Title
+st.markdown("""
+<h1 style='font-size:18px;'>J.1.1 組織の状況及びその状況の理解 (4.1) </h1>
+""", unsafe_allow_html=True)
+
+# Collapsible section for main content
+with st.expander("詳細を表示"):
+    # Main content text
+    st.markdown("""
+    **事業の実施状況を踏まえて、適切なPMSの構築・運用に影響を与える可能性のある外部および内部の課題を特定することを求めるもの。**
+    """)
+
+    st.markdown("""
+<h2 style='font-size:18px;'>■ 実施のポイント</h2>
+""", unsafe_allow_html=True)
     
-    for line in lines:
-        # 空行をスキップ
-        if not line.strip():
-            continue
-        
-        # 書式を検出
-        match = re.search(r'\[書式(\d+):.*\]', line)
-        if match:
-            format_type = int(match.group(1))
-            content = re.sub(r'\[書式\d+:.*\]', '', line).strip()
-            
-            if format_type == 1:
-                st.header(content)
-            elif format_type == 2:
-                st.subheader(content)
-            elif format_type == 3:
-                st.markdown(f'### {content}')
-            elif format_type == 4:
-                st.write(content)
-            elif format_type == 5:
-                st.write(f'**{content}**')
-            elif format_type == 6:
-                st.code(content, language='python')
-            elif format_type == 7:
-                st.text(content)
-        else:
-            # 書式指定がない行はそのまま表示
-            st.write(line)
+    # Bullet points
+    st.markdown("""
+    ◇ 本項は、J1.14 個人情報保護マネジメントシステムの適用範囲の決定、J.3.1.2 リスク及び機会に対処する活動、J.6.3 マネジメントレビュー等を実施する際に必要となる考え方。<br>
+    ◇ 課題の特定は、PMSに影響を与える可能性のある課題の中から、<span style="color:red;">事業者にとってできるだけ重要なものが漏れないように継続的に行われていればよい。</span><br>
+    ◇ もし外部または内部の内容が変わる可能性がある場合は、適宜見直すことが望ましい。<br>
+    """, unsafe_allow_html=True)
+    
+    # Custom styled info box using st.markdown
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; border-left: 5px solid #2196f3;">
+        <div style="font-size:18px;">
+            【構築・運用計画改定による変更点】<br>
+            ● <span style="color:red;">指導項目の修正</span>（「課題の把握」「外部及び内部の課題を特定すること」）<br>
+            ⇒指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-# 既存のテキストを解析して表示
-parse_and_display_text(text)
-
-# 他のPythonファイルから追加のテキストを取得
-additional_text = get_additional_text()
-
-# 追加のテキストを解析して表示
-parse_and_display_text(additional_text)
+# Horizontal line before table
+st.markdown("---")
