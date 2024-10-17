@@ -394,3 +394,30 @@ chitekizaisan2024/0528_ai.pdf) 更新日：
 st.markdown("""
 [総務省. (2024). 情報通信白書2024年版. 総務省. 取得先: ](https://www.soumu.go.jp/johotsusintokei/whitepaper/r06.html)更新日：
 令和6年5月）""", unsafe_allow_html=True)
+
+#################################################################
+# Streamlitレイアウト
+st.markdown("---")
+
+# タイトル
+st.markdown("""
+<h1 style='font-size:18px; margin-bottom: 5px;'>著作権法</h1>
+""", unsafe_allow_html=True)
+
+with st.expander("詳細を表示"):
+    # 説明文
+    st.write("""
+    Main
+    """)
+        with st.expander("詳細を表示"):
+             # 説明文2
+    st.write("""
+    Sub
+    """)with st.expander("詳細を表示"):
+             # 説明文3
+    st.write("""
+    Sub
+    """)
+
+st.markdown("---")
+#################################################################
