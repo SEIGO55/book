@@ -45,6 +45,15 @@ with st.expander("詳細を表示"):
         - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
         </p>
         """, unsafe_allow_html=True)
-    
+    # Custom styled info box using st.markdown
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; border-left: 5px solid #2196f3;">
+        <div style="font-size:18px;">
+            【構築・運用計画改定による変更点】<br>
+            ● <span style="color:red;">指導項目の修正</span>（「課題の把握」「外部及び内部の課題を特定すること」）<br>
+            ⇒指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("---")
 
