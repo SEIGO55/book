@@ -286,6 +286,7 @@ st.markdown("""
 (https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html) （更新日：
 2024年4月19日）
 """)
+from PIL import Image
 # 画像を読み込む
 image = Image.open("AI事業者ガイドラインの位置づけ.PNG")
 
