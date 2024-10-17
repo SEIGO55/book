@@ -11,8 +11,8 @@ def plot_pie_chart():
     fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, hole=.3)])
     
     # グラフのラベルやサイズ、マージンを調整
-    fig.update_traces(textposition='inside', textinfo='percent+label')
-    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=10, b=10, l=10, r=10), height=400)
+    fig.update_traces(textposition='outside', textinfo='label+percent', pull=[0, 0, 0.1])  # ラベルを外側に配置
+    fig.update_layout(title_text="ハーヴィー・コールマンのPIE理論", margin=dict(t=20, b=20, l=10, r=10), height=350, showlegend=False)  # グラフの高さと余白を調整
     
     return fig
 
@@ -52,7 +52,7 @@ with st.expander("詳細を表示"):
 
     # 下部に1カラムレイアウトで情報ボックスを表示
     st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 10px; margin-bottom: 0px;">
+    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
         「PIEの法則」は、キャリアを成功させるために重要な3つの要素を表すフレームワークで、
         特に外資系企業やビジネス界での出世や成功において強調されることがあります。
