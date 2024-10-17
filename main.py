@@ -440,6 +440,14 @@ st.markdown("""
               <summary>5.xxx</summary>
                   <p>xxxxx</p>
 </details>
+<details>
+                <summary>6.xxx</summary>
+                    <p>xxxx</p>
+</details>
+<details>
+                    <summary>7.xxx</summary>
+                        <p>xxxx</p>
+</details>
 """, unsafe_allow_html=True)
 
 st.markdown("---")
