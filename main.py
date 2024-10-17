@@ -131,7 +131,7 @@ data = {
 # データをデータフレームに変換
 df = pd.DataFrame(data)
 
-    # テーブルの表示
-    st.table(df)
+# テーブルの表示
+st.table(df)
 
 
