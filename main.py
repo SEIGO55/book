@@ -286,3 +286,8 @@ st.markdown("""
 (https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html) （更新日：
 2024年4月19日）
 """)
+# 画像を読み込む
+image = Image.open("your_image.jpg")
+
+# 画像を表示する
+st.image(image, caption="AI事業者ガイドラインの位置づけ.jpg", use_column_width=True)
