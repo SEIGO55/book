@@ -33,7 +33,7 @@ with st.expander("詳細を表示"):
     with col2:
         st.subheader("説明")
         st.markdown("""
-        <p style="font-size:12px; line-height:1.5; margin-top: -10px; margin-bottom: 0px;">
+        <p style="font-size:12px; line-height:1.5; margin-top: -10px; margin-bottom: 5px;">
         <strong>パフォーマンス: 成功の基盤 (10%)</strong><br>
         - パフォーマンスはキャリアの進展において重要であり、全体の10%を占めています。<br>
         - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br><br>
