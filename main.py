@@ -26,32 +26,30 @@ st.markdown("""
 with st.expander("詳細を表示"):
     # Main content text
     st.markdown("""
-    **事業の実施状況を踏まえて、適切なPMSの構築・運用に影響を与える可能性のある外部および内部の課題を特定することを求めるもの。**
-    """)
     
-# 2カラムレイアウトを作成
-col1, col2 = st.columns(2)
-
-# 左側に円グラフを表示
-with col1:
-    st.plotly_chart(plot_pie_chart())
-
-# 右側に説明を表示
-with col2:
-    st.subheader("説明")
-    st.markdown("""
-    <p style="font-size:12px;">
-    <strong>パフォーマンス: 成功の基盤 (10%)</strong><br>
-    - パフォーマンスはキャリアの進展において重要であり、全体の10%を占めています。<br>
-    - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br>
-    <strong>イメージ: 認識が力 (30%)</strong><br>
-    - 他者からの認識がキャリアの成長に30%影響します。<br>
-    - ポジティブでプロフェッショナルなイメージを築くことが大切です。<br>
-    <strong>露出: 能力の発揮 (60%)</strong><br>
-    - 露出はキャリア進展の60%を占めています。<br>
-    - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
-    </p>
-    """, unsafe_allow_html=True)
-st.markdown("---")
-
+    
+    # 2カラムレイアウトを作成
+    col1, col2 = st.columns(2)
+    
+    # 左側に円グラフを表示
+    with col1:
+        st.plotly_chart(plot_pie_chart())
+    
+    # 右側に説明を表示
+    with col2:
+        st.subheader("説明")
+        st.markdown("""
+        <p style="font-size:12px;">
+        <strong>パフォーマンス: 成功の基盤 (10%)</strong><br>
+        - パフォーマンスはキャリアの進展において重要であり、全体の10%を占めています。<br>
+        - 仕事をうまくこなすことは必要ですが、それだけでは成長の限界があります。<br>
+        <strong>イメージ: 認識が力 (30%)</strong><br>
+        - 他者からの認識がキャリアの成長に30%影響します。<br>
+        - ポジティブでプロフェッショナルなイメージを築くことが大切です。<br>
+        <strong>露出: 能力の発揮 (60%)</strong><br>
+        - 露出はキャリア進展の60%を占めています。<br>
+        - 自分の能力を示し、適切な人々に見てもらうことが成功の鍵です。
+        </p>
+        """, unsafe_allow_html=True))
+    st.markdown("---")
 
