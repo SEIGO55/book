@@ -535,14 +535,14 @@ def display_references(bib_entries):
         st.markdown(f"**{title}** ({year})  \n{author}  \n*{journal}*")
 
 # Streamlitのタイトル
-st.title("参考文献リスト")
+st.title("最新論文紹介")
 
 # BibTeXエントリをパース
 bib_entries = parse_bibtex(bibtex_str)
 
 # 参考文献の表示
-st.markdown("""
 display_references(bib_entries)
+st.markdown("""
 (https://arxiv.org/pdf/2406.01297)
 """, unsafe_allow_html=True)
 
