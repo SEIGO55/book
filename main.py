@@ -541,7 +541,10 @@ st.title("参考文献リスト")
 bib_entries = parse_bibtex(bibtex_str)
 
 # 参考文献の表示
+st.markdown("""
 display_references(bib_entries)
+(https://arxiv.org/pdf/2406.01297)
+""", unsafe_allow_html=True)
 
 
 
