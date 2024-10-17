@@ -13,8 +13,22 @@ def plot_pie_chart():
     return fig
 
 # Streamlitレイアウト: 1列目に円グラフ、2列目に説明を追加
-st.title("ハーヴィー・コールマンのPIE理論")
+#st.title("ハーヴィー・コールマンのPIE理論")
+st.markdown("---")
 
+# Title
+st.markdown("""
+<h1 style='font-size:18px;'>ハーヴィー・コールマンのPIE理論 </h1>
+""", unsafe_allow_html=True)
+#st.markdown("---")
+
+# Collapsible section for main content
+with st.expander("詳細を表示"):
+    # Main content text
+    st.markdown("""
+    **事業の実施状況を踏まえて、適切なPMSの構築・運用に影響を与える可能性のある外部および内部の課題を特定することを求めるもの。**
+    """)
+    
 # 2カラムレイアウトを作成
 col1, col2 = st.columns(2)
 
