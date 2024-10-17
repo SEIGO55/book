@@ -464,7 +464,7 @@ st.markdown("""
 
 # タイトル
 st.markdown("""
-<h1 style='font-size:18px; margin-bottom: 5px;'>著作権法</h1>
+<h1 style='font-size:18px; margin-bottom: 5px;'>AIと著作権</h1>
 """, unsafe_allow_html=True)
 
 st.markdown("""
