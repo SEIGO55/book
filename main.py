@@ -287,7 +287,7 @@ st.markdown("""
 2024年4月19日）
 """)
 # 画像を読み込む
-image = Image.open("your_image.jpg")
+image = Image.open("AI事業者ガイドラインの位置づけ.PNG")
 
 # 画像を表示する
 st.image(image, caption="AI事業者ガイドラインの位置づけ.jpg", use_column_width=True)
