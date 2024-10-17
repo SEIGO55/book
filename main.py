@@ -380,3 +380,14 @@ st.markdown("""
 フィルターバブルとは、ネット上のアルゴリズムが個人の興味に基づいた情報のみを表示することで、異なる意見や視点が排除され、情報や価値観が一方的に偏る現象です。これにより、利用者が自己の価値観に閉じ込められる危険性があります。
 """, unsafe_allow_html=True)
 
+st.markdown("""
+AIと著作権について
+""", unsafe_allow_html=True)
+st.markdown("""[文化審議会著作権分科会法制度小委員会「AIと著作権に関する考え方について」](https://www.bunka.go.jp/
+seisaku/bunkashingikai/chosakuken/pdf/94037901_01.pdf) 更新日：
+令和5年6月）""", unsafe_allow_html=True)
+
+st.markdown("""[AI時代の知的財産権検討会「AI時代の知的財産権検討会 中間とりまとめ」](https://www.kantei.go.jp/jp/singi/titeki2/
+chitekizaisan2024/0528_ai.pdf) 更新日：
+令和6年5月）""", unsafe_allow_html=True)
+
