@@ -27,7 +27,7 @@ with st.expander("詳細を表示"):
     
     # 左側に円グラフを表示
     with col1:
-        st.plotly_chart(plot_pie_chart(), use_container_width=True)  # グラフの幅をカラムいっぱいに
+        st.plotly_chart(plot_pie_chart(), use_container_width=False)  # グラフの幅をカラムいっぱいに
     
     # 右側に説明を表示
     with col2:
