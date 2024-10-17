@@ -391,3 +391,6 @@ st.markdown("""[AI時代の知的財産権検討会「AI時代の知的財産権
 chitekizaisan2024/0528_ai.pdf) 更新日：
 令和6年5月）""", unsafe_allow_html=True)
 
+st.markdown("""
+[総務省. (2024). 情報通信白書2024年版. 総務省. 取得先: ](https://www.soumu.go.jp/johotsusintokei/whitepaper/r06.html)更新日：
+令和6年5月）""", unsafe_allow_html=True)
