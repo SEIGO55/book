@@ -376,7 +376,7 @@ st.markdown(df.to_html(escape=False), unsafe_allow_html=True)
 
 # 注釈を表示
 st.markdown("""
-*<sup>1</sup> フィルターバブル:  
+フィルターバブル<sup>1</sup>:  
 フィルターバブルとは、ネット上のアルゴリズムが個人の興味に基づいた情報のみを表示することで、異なる意見や視点が排除され、情報や価値観が一方的に偏る現象です。これにより、利用者が自己の価値観に閉じ込められる危険性があります。
-""")
+""", unsafe_allow_html=True)
 
