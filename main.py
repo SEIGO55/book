@@ -581,3 +581,120 @@ with st.expander("詳細を表示"):
         """, unsafe_allow_html=True)
 
 
+
+#######################################################################################################
+# -------- タイトル部分 --------
+# Horizontal line before title
+st.markdown("---")
+# Title
+st.markdown("""
+<h1 style='font-size:18px;'>J.1.1 組織の状況及びその状況の理解 (4.1) </h1>
+""", unsafe_allow_html=True)
+#st.markdown("---")
+#st.title("概要")
+
+# Collapsible section for main content
+with st.expander("詳細を表示"):
+    # Main content text
+    st.markdown("""
+    **事業の実施状況を踏まえて、適切なPMSの構築・運用に影響を与える可能性のある外部および内部の課題を特定することを求めるもの。**
+    """)
+
+    # Subheader
+    #st.subheader("■実施のポイント")
+
+    st.markdown("""
+<h2 style='font-size:18px;'>■ 実施のポイント</h2>
+""", unsafe_allow_html=True)
+    
+    # Bullet points
+    st.markdown("""
+    ◇ 本項は、J1.14 個人情報保護マネジメントシステムの適用範囲の決定、J.3.1.2 リスク及び機会に対処する活動、J.6.3 マネジメントレビュー等を実施する際に必要となる考え方。<br>
+    ◇ 課題の特定は、PMSに影響を与える可能性のある課題の中から、<span style="color:red;">事業者にとってできるだけ重要なものが漏れないように継続的に行われていればよい。</span><br>
+    ◇ もし外部または内部の内容が変わる可能性がある場合は、適宜見直すことが望ましい。<br>
+    """, unsafe_allow_html=True)
+
+    # # Note or Important Section
+    # st.info("""【構築・運用計画改定による変更点】
+    # \n● 指導項目の修正（「課題の把握」「外部及び内部の課題を特定すること」）
+    # \n● 指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+    # """)
+    
+    # Custom styled info box using st.markdown
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; border-left: 5px solid #2196f3;">
+        <div style="font-size:18px;">
+            【構築・運用計画改定による変更点】<br>
+            ● <span style="color:red;">指導項目の修正</span>（「課題の把握」「外部及び内部の課題を特定すること」）<br>
+            ⇒指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Horizontal line before table
+st.markdown("---")
+########################################################################################################################################
+#######################################################################################################
+# -------- タイトル部分 --------
+# Horizontal line before title
+st.markdown("---")
+# Title
+st.markdown("""
+<h1 style='font-size:18px;'>個人情報の第三者提供ルールについて </h1>
+""", unsafe_allow_html=True)
+#st.markdown("---")
+
+# Collapsible section for main content
+with st.expander("詳細を表示"):
+    # Main content text
+    st.markdown("""
+    **原則：個人情報取扱事業者は、個人データを第三者に提供する場合、原則としてあらかじめ本人の同意を得なければなりません（法27条1項）。**
+    """)
+        st.markdown("""
+    **論点1 第三者の定義は**
+    """)
+    st.markdown("""
+    「第三者」とは、個人データの保護に関する法律のガイドラインに基づき、
+    ①その個人データによって特定される本人、
+    ②その個人データを提供しようとする個人情報取扱事業者以外のすべての者を指します（ガイドラインQ&A 7-1）。
+    これは、自然人、法人、その他の団体を問いません。
+
+個人データを「第三者」に提供する場合、原則として本人の同意が必要です（通則編GL3-6-1）。以下は「第三者提供」とされる事例ですが、委託、事業承継、または共同利用の場合を除きます：
+
+親会社と子会社、兄弟会社、グループ会社間での個人データの交換
+フランチャイズ組織における本部と加盟店間での個人データの交換
+同業者間で特定の個人データを交換する場合
+一方、「第三者提供」とされない事例としては、同一業者内で他部門へ個人データを提供する場合があります。ただし、この場合でも利用目的に基づく制限が適用されることがあります。
+    """)
+    st.markdown("""
+<h2 style='font-size:18px;'>■ 実施のポイント</h2>
+""", unsafe_allow_html=True)
+    
+    # Bullet points
+    st.markdown("""
+    ◇ 本項は、J1.14 個人情報保護マネジメントシステムの適用範囲の決定、J.3.1.2 リスク及び機会に対処する活動、J.6.3 マネジメントレビュー等を実施する際に必要となる考え方。<br>
+    ◇ 課題の特定は、PMSに影響を与える可能性のある課題の中から、<span style="color:red;">事業者にとってできるだけ重要なものが漏れないように継続的に行われていればよい。</span><br>
+    ◇ もし外部または内部の内容が変わる可能性がある場合は、適宜見直すことが望ましい。<br>
+    """, unsafe_allow_html=True)
+
+    # # Note or Important Section
+    # st.info("""【構築・運用計画改定による変更点】
+    # \n● 指導項目の修正（「課題の把握」「外部及び内部の課題を特定すること」）
+    # \n● 指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+    # """)
+    
+    # Custom styled info box using st.markdown
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; border-left: 5px solid #2196f3;">
+        <div style="font-size:18px;">
+            【構築・運用計画改定による変更点】<br>
+            ● <span style="color:red;">指導項目の修正</span>（「課題の把握」「外部及び内部の課題を特定すること」）<br>
+            ⇒指針の項目No.10の表現に合わせたもので、実務内容に変更はない
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Horizontal line before table
+st.markdown("---")
+########################################################################################################################################
+
