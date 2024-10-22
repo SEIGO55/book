@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 
 ######################
 # O1の開発者の見解まとめ
-
+st.markdown("""
 OpenAIのO1の開発者が語る、O1の仕組みとその特徴、そして今後の展望について、以下の要点をまとめました。
 
 <details>
@@ -63,7 +63,7 @@ O1の開発者は、今後2年以内に、AIエージェントがプログラミ
 
 ### 参考文献
 - [OpenAI O1の紹介動画](https://youtu.be/krX9DUXWWuA)
-
+""", unsafe_allow_html=True)
 #######################
 
 
