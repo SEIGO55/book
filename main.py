@@ -746,7 +746,7 @@ st.markdown("""
 
 st.markdown("""
 <details>
-  <summary>詳細を表示</summary>
+  <summary>詳細を表示　5.1 情報セキュリティのための方針群</summary>
   <p><strong>5.1 情報セキュリティのための方針群</strong></p>
   <details>
     <summary>1. 管理策の概要</summary>
@@ -791,7 +791,7 @@ st.markdown("---")
 ########################################################################################################################################
 st.markdown("""
 <details>
-  <summary>詳細を表示</summary>
+  <summary>詳細を表示　5.2 情報セキュリティの役割および責任</summary>
   <p><strong>5.2 情報セキュリティの役割および責任</strong></p>
   <details>
     <summary>1. 情報セキュリティの役割と責任の明確化</summary>
@@ -843,7 +843,7 @@ st.markdown("---")
 ########################################################################################################################################
 st.markdown("""
 <details>
-  <summary>詳細を表示</summary>
+  <summary>詳細を表示　5.3 職務の分離</summary>
   <p><strong>5.3 職務の分離</strong></p>
   <details>
     <summary>1. 管理策の目的</summary>
