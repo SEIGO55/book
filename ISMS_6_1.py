@@ -72,5 +72,16 @@ c.役員や管理職の採用に関しては、過去の信用情報など、よ
 選考プロセスはフルタイム、パートタイム、臨時スタッフを含むすべての従業員に対して実行することが大切です。
         """)
 
+st.markdown("<h2 style='font-size:16px; margin-top: 20px;'>チェックポイント</h2>", unsafe_allow_html=True)
+    
+    # チェックポイントのチェックボックス
+    checkpoint1 = st.checkbox("1. 先行ポリシーと手続きの存在:  組織が先行に関するポリシーと手続きを策定し実施していますか?")
+    checkpoint2 = st.checkbox("2. 背景調査:  先行プロセスの一環として、従業員や請負業者の背景調査をおこなっていますか?")
+    
+    # チェックが全て完了したか確認
+    if checkpoint1 and checkpoint2:
+        st.success("すべてのチェックポイントが完了しました。")
+
+
 # 関数を呼び出してページを表示
 display_page()
