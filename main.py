@@ -3,7 +3,10 @@ import plotly.graph_objects as go
 
 import ISMS_5_1
 ISMS_5_1.display_page()
-
+st.markdown("---")
+import ISMS_5_12
+ISMS_5_12.display_page()
+st.markdown("---")
 ########################################################################################################################################
 st.markdown("""
 <details>
