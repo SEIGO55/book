@@ -51,6 +51,17 @@ def display_page():
 
     </details>
     """, unsafe_allow_html=True)
+        
+    st.markdown("<h2 style='font-size:16px; margin-top: 20px;'>チェックポイント</h2>", unsafe_allow_html=True)
+    
+    # チェックポイントのチェックボックス
+    checkpoint1 = st.checkbox("1. 認証情報に関するポリシーおよび手順が適切に策定され、文書化されていますか？")
+    checkpoint2 = st.checkbox("2. 認証情報が適切に割り当てられ、管理されていますか？")
+    checkpoint3 = st.checkbox("3. 認証メカニズム(例: 一要素認証、二要素認証、多要素認証）がリスクに応じて適切に選択されていますか？")
+    
+    # チェックが全て完了したか確認
+    if checkpoint1 and checkpoint2 and checkpoint3:
+        st.success("すべてのチェックポイントが完了しました。")
 
 # 関数を呼び出してページを表示
 display_page()
