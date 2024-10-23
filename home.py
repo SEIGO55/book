@@ -7,4 +7,4 @@ import section1
 section1.display_page()
 
 import section2
-section1.display_page()
+section2.display_page()
