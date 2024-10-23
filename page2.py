@@ -73,7 +73,7 @@ def display_page():
     st.markdown("---")
 
 # 関数を呼び出して内容を表示
-display_page()
+print(display_page())
 
 def display_blog():
     st.markdown("# 不易流行：伝統と革新の調和")
