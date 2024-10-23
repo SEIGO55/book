@@ -1,6 +1,7 @@
 import streamlit as st
 
 def display_page():
+    with st.expander("管理策の概要"):
     st.markdown("""
     <h1 style='font-size:18px; margin-bottom: 5px;'>7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
     """, unsafe_allow_html=True)
