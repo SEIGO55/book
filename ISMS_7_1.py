@@ -2,13 +2,13 @@ import streamlit as st
 
 def display_page():
     st.markdown("""
-    <h1 style='font-size:18px; margin-bottom: 5px;'>8.7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
+    <h1 style='font-size:18px; margin-bottom: 5px;'>7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
     """, unsafe_allow_html=True)
 
     st.markdown("""
     <details>
-      <summary>1. 管理策 8.7.1 の概要</summary>
-      <p>管理策 8.7.1は「物理的セキュリティ境界（Physical Security Parameters）」に関するもので、附属書Aの物理的セキュリティ管理策に属します。この管理策の目的は、情報を含むエリアを保護するためにセキュリティ境界を定義し、無許可の人が侵入するのを防ぎ、情報や関連する資産が損傷や改ざんを受けないようにすることです。</p>
+      <summary>1. 管理策 7.1 の概要</summary>
+      <p>管理策 7.1は「物理的セキュリティ境界（Physical Security Parameters）」に関するもので、附属書Aの物理的セキュリティ管理策に属します。この管理策の目的は、情報を含むエリアを保護するためにセキュリティ境界を定義し、無許可の人が侵入するのを防ぎ、情報や関連する資産が損傷や改ざんを受けないようにすることです。</p>
     </details>
 
     <details>
@@ -41,6 +41,17 @@ def display_page():
     </details>
     """, unsafe_allow_html=True)
 
+# 折りたたみセクションの作成
+    with st.expander("実施手順（例）"):
+        st.markdown("""
+XXXX
+        """)
+    
+    # ワンポイントアドバイスのセクション
+    with st.expander("ワンポイントアドバイス"):
+        st.write("""
+XSXX
+        """)
 
 
 # 関数を呼び出してページを表示
