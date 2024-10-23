@@ -3,6 +3,7 @@ import streamlit as st
 def display_page():
     st.markdown("""
     <div style='background-color: #ffe6e6; border: 1px solid #ffcccc; padding: 10px; border-radius: 5px;'>
+    <summary style='background-color: #ffe6e6; border: 1px solid #ffcccc; padding: 10px; border-radius: 5px;'>
         <h1 style='font-size:18px; margin-bottom: 5px;'>7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
     </div>
     <details>
