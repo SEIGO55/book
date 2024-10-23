@@ -46,11 +46,9 @@ def display_page():
     </details>
     </div>
     """, unsafe_allow_html=True)
-
-st.markdown("""
+    st.markdown("""
     <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
-        <h1 style='font-size:18px; margin-bottom: 5px;'>7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
     <details>
       <summary>"実施手順（例）"</summary>
       <p>
