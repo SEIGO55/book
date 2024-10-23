@@ -4,5 +4,7 @@ st.title("Home Page")
 st.write("これはホームページです。")
 
 import section1
+section1.display_page()
 
+import section2
 section1.display_page()
