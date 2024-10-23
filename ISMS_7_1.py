@@ -17,6 +17,7 @@ def display_page():
       <p>
       **セキュリティ境界**  
         セキュリティ境界は、セキュアエリアと非セキュアまたはセキュリティが低いエリアを区別するための境界です。この境界はアクセスを管理し、機密情報や資産を保護するために設けられます。
+        
     　**セキュアエリア**  
         セキュアエリアは、情報や資産を保護するために特定のセキュリティ対策が実施されている環境を指します。
       </p>
@@ -49,7 +50,8 @@ def display_page():
     # 実施手順（例）のセクション
     with st.expander("実施手順（例）"):
         st.markdown("""
-        XXXX
+        <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
+        XXXX</div>
         """)
 
     # ワンポイントアドバイスのセクション
