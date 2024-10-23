@@ -1634,5 +1634,11 @@ data = [
      "構外にある装置の紛失、損傷、盗難または侵害、及び組織の業務の中断を防止するため。"]
 ]
 
+# DataFrameに変換
+df = pd.DataFrame(data, columns=["箇条", "標題", "管理策", "目的"])
+
+# "箇条" カラムをインデックスに設定
+df.set_index("箇条", inplace=True)
+
 # Streamlitでテーブルを表示
-st.table(pd.DataFrame(data, columns=["箇条","標題", "管理策", "目的"],index=False))
+st.table(df)
