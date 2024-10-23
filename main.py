@@ -26,48 +26,91 @@ st.markdown("---")
 
 import streamlit as st
 import ISMS_7_1
+import ISMS_7_2
+import ISMS_7_3
+import ISMS_7_4
+import ISMS_7_5
+import ISMS_7_6
+import ISMS_7_7
+import ISMS_7_8
+import ISMS_7_9
+import ISMS_7_10
+import ISMS_7_11
+import ISMS_7_12
+import ISMS_7_13
+import ISMS_7_14
 
-import streamlit as st
-import ISMS_7_1
+# モジュールと関数の対応表を辞書で作成
+modules = {
+    '7.1': ISMS_7_1,
+    '7.2': ISMS_7_2,
+    '7.3': ISMS_7_3,
+    '7.4': ISMS_7_4,
+    '7.5': ISMS_7_5,
+    '7.6': ISMS_7_6,
+    '7.7': ISMS_7_7,
+    '7.8': ISMS_7_8,
+    '7.9': ISMS_7_9,
+    '7.10': ISMS_7_10,
+    '7.11': ISMS_7_11,
+    '7.12': ISMS_7_12,
+    '7.13': ISMS_7_13,
+    '7.14': ISMS_7_14
+}
 
-# Define the function to display the table with clickable buttons
+# テーブルとボタンを表示する関数
 def main():
-    # Header
+    # ヘッダーを表示
     st.markdown("<h3 style='text-align: center; background-color: #d3d3d3;'>物理的管理策の項目</h3>", unsafe_allow_html=True)
 
-    # Two columns for the table
+    # 2カラムで表示
     col1, col2 = st.columns(2)
 
-    # Initialize a placeholder for the dynamic content
+    # 動的コンテンツを表示するためのプレースホルダー
     placeholder = st.empty()
 
+    # 各カラムにボタンを配置
     with col1:
         if st.button("7.1 物理的セキュリティ境界"):
             st.session_state['selected_item'] = '7.1'
-        st.write("7.2 物理的入退")
-        st.write("7.3 オフィス、部屋及び施設のセキュリティ")
-        st.write("7.4 物理的なセキュリティの監視")
-        st.write("7.5 物理的及び環境的脅威からの保護")
-        st.write("7.6 セキュリティを保つべき領域での作業")
-        st.write("7.7 クリアデスク・クリアスクリーン")
+        if st.button("7.2 物理的入退"):
+            st.session_state['selected_item'] = '7.2'
+        if st.button("7.3 オフィス、部屋及び施設のセキュリティ"):
+            st.session_state['selected_item'] = '7.3'
+        if st.button("7.4 物理的なセキュリティの監視"):
+            st.session_state['selected_item'] = '7.4'
+        if st.button("7.5 物理的及び環境的脅威からの保護"):
+            st.session_state['selected_item'] = '7.5'
+        if st.button("7.6 セキュリティを保つべき領域での作業"):
+            st.session_state['selected_item'] = '7.6'
+        if st.button("7.7 クリアデスク・クリアスクリーン"):
+            st.session_state['selected_item'] = '7.7'
 
     with col2:
-        st.write("7.8 装置の設置及び保護")
-        st.write("7.9 域外にある資産のセキュリティ")
-        st.write("7.10 記憶媒体")
-        st.write("7.11 サポートユーティリティ")
-        st.write("7.12 ケーブル配線のセキュリティ")
-        st.write("7.13 装置の保守")
-        st.write("7.14 装置のセキュリティを保った処分または再利用")
+        if st.button("7.8 装置の設置及び保護"):
+            st.session_state['selected_item'] = '7.8'
+        if st.button("7.9 域外にある資産のセキュリティ"):
+            st.session_state['selected_item'] = '7.9'
+        if st.button("7.10 記憶媒体"):
+            st.session_state['selected_item'] = '7.10'
+        if st.button("7.11 サポートユーティリティ"):
+            st.session_state['selected_item'] = '7.11'
+        if st.button("7.12 ケーブル配線のセキュリティ"):
+            st.session_state['selected_item'] = '7.12'
+        if st.button("7.13 装置の保守"):
+            st.session_state['selected_item'] = '7.13'
+        if st.button("7.14 装置のセキュリティを保った処分または再利用"):
+            st.session_state['selected_item'] = '7.14'
 
-    # Display the content dynamically below the table
+    # ボタンがクリックされたときに対応するモジュールのページを表示
     if 'selected_item' in st.session_state:
+        selected_module = modules[st.session_state['selected_item']]
         with placeholder.container():
-            if st.session_state['selected_item'] == '7.1':
-                ISMS_7_1.display_page()
+            selected_module.display_page()
 
 if __name__ == "__main__":
     main()
+
 
 
 st.markdown("---")
