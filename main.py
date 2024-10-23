@@ -24,45 +24,37 @@ import ISMS_5_17
 ISMS_5_17.display_page()
 st.markdown("---")
 
-# Define the HTML code for the table
-html_code = """
-<table style="width:100%; border-collapse: collapse; border: 1px solid black;">
-    <tr style="background-color: #d3d3d3; text-align: center;">
-        <td colspan="2" style="padding: 10px; font-weight: bold; border: 1px solid black;">物理的管理策の項目</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.1 物理的セキュリティ境界</td>
-        <td style="padding: 10px; border: 1px solid black;">7.8 装置の設置及び保護</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.2 物理的入退</td>
-        <td style="padding: 10px; border: 1px solid black;">7.9 域外にある資産のセキュリティ</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.3 オフィス、部屋及び施設のセキュリティ</td>
-        <td style="padding: 10px; border: 1px solid black;">7.10 記憶媒体</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.4 物理的なセキュリティの監視</td>
-        <td style="padding: 10px; border: 1px solid black;">7.11 サポートユーティリティ</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.5 物理的及び環境的脅威からの保護</td>
-        <td style="padding: 10px; border: 1px solid black;">7.12 ケーブル配線のセキュリティ</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.6 セキュリティを保つべき領域での作業</td>
-        <td style="padding: 10px; border: 1px solid black;">7.13 装置の保守</td>
-    </tr>
-    <tr>
-        <td style="padding: 10px; border: 1px solid black;">7.7 クリアデスク・クリアスクリーン</td>
-        <td style="padding: 10px; border: 1px solid black;">7.14 装置のセキュリティを保った処分または再利用</td>
-    </tr>
-</table>
-"""
+import streamlit as st
+import ISMS_7_1
 
-# Display the table using Streamlit
-st.markdown(html_code, unsafe_allow_html=True)
+# Define the function to display the table with clickable buttons
+def main():
+    st.markdown("<h3 style='text-align: center; background-color: #d3d3d3;'>物理的管理策の項目</h3>", unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if st.button("7.1 物理的セキュリティ境界"):
+            ISMS_7_1.display_page()
+        st.write("7.2 物理的入退")
+        st.write("7.3 オフィス、部屋及び施設のセキュリティ")
+        st.write("7.4 物理的なセキュリティの監視")
+        st.write("7.5 物理的及び環境的脅威からの保護")
+        st.write("7.6 セキュリティを保つべき領域での作業")
+        st.write("7.7 クリアデスク・クリアスクリーン")
+
+    with col2:
+        st.write("7.8 装置の設置及び保護")
+        st.write("7.9 域外にある資産のセキュリティ")
+        st.write("7.10 記憶媒体")
+        st.write("7.11 サポートユーティリティ")
+        st.write("7.12 ケーブル配線のセキュリティ")
+        st.write("7.13 装置の保守")
+        st.write("7.14 装置のセキュリティを保った処分または再利用")
+
+if __name__ == "__main__":
+    main()
+
 st.markdown("---")
 
 import ISMS_7_1
