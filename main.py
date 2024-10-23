@@ -10,6 +10,9 @@ st.markdown("---")
 import ISMS_5_13
 ISMS_5_13.display_page()
 st.markdown("---")
+import ISMS_5_14
+ISMS_5_14.display_page()
+st.markdown("---")
 ########################################################################################################################################
 st.markdown("""
 <details>
