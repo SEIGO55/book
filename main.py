@@ -24,33 +24,45 @@ import ISMS_5_17
 ISMS_5_17.display_page()
 st.markdown("---")
 
-# Define the data for the table
-data = {
-    "Column 1": [
-        "7.1 物理的セキュリティ境界",
-        "7.2 物理的入退",
-        "7.3 オフィス、部屋及び施設のセキュリティ",
-        "7.4 物理的なセキュリティの監視",
-        "7.5 物理的及び環境的脅威からの保護",
-        "7.6 セキュリティを保つべき領域での作業",
-        "7.7 クリアデスク・クリアスクリーン"
-    ],
-    "Column 2": [
-        "7.8 装置の設置及び保護",
-        "7.9 域外にある資産のセキュリティ",
-        "7.10 記憶媒体",
-        "7.11 サポートユーティリティ",
-        "7.12 ケーブル配線のセキュリティ",
-        "7.13 装置の保守",
-        "7.14 装置のセキュリティを保った処分または再利用"
-    ]
-}
+# Define the HTML code for the table
+html_code = """
+<table style="width:100%; border-collapse: collapse; border: 1px solid black;">
+    <tr style="background-color: #d3d3d3; text-align: center;">
+        <td colspan="2" style="padding: 10px; font-weight: bold; border: 1px solid black;">物理的管理策の項目</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.1 物理的セキュリティ境界</td>
+        <td style="padding: 10px; border: 1px solid black;">7.8 装置の設置及び保護</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.2 物理的入退</td>
+        <td style="padding: 10px; border: 1px solid black;">7.9 域外にある資産のセキュリティ</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.3 オフィス、部屋及び施設のセキュリティ</td>
+        <td style="padding: 10px; border: 1px solid black;">7.10 記憶媒体</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.4 物理的なセキュリティの監視</td>
+        <td style="padding: 10px; border: 1px solid black;">7.11 サポートユーティリティ</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.5 物理的及び環境的脅威からの保護</td>
+        <td style="padding: 10px; border: 1px solid black;">7.12 ケーブル配線のセキュリティ</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.6 セキュリティを保つべき領域での作業</td>
+        <td style="padding: 10px; border: 1px solid black;">7.13 装置の保守</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid black;">7.7 クリアデスク・クリアスクリーン</td>
+        <td style="padding: 10px; border: 1px solid black;">7.14 装置のセキュリティを保った処分または再利用</td>
+    </tr>
+</table>
+"""
 
-# Convert to a DataFrame
-df = pd.DataFrame(data)
-
-# Display the static table using Streamlit
-st.table(df)
+# Display the table using Streamlit
+st.markdown(html_code, unsafe_allow_html=True)
 st.markdown("---")
 
 import ISMS_7_1
