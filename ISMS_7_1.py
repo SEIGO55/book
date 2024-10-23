@@ -56,7 +56,7 @@ def display_page():
 
     # ワンポイントアドバイスのセクション
     with st.expander("ワンポイントアドバイス"):
-        st.write("""
+        st.markdown("""
         XSXX
         """)
 
