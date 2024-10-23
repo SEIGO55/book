@@ -24,19 +24,7 @@ import ISMS_5_17
 ISMS_5_17.display_page()
 st.markdown("---")
 
-import ISMS_7_1, ISMS_7_2
-import ISMS_7_3
-import ISMS_7_4
-import ISMS_7_5
-import ISMS_7_6
-import ISMS_7_7
-import ISMS_7_8
-import ISMS_7_9
-import ISMS_7_10
-import ISMS_7_11
-import ISMS_7_12
-import ISMS_7_13
-import ISMS_7_14
+import ISMS_7_1, ISMS_7_2, ISMS_7_3, ISMS_7_4, ISMS_7_5, ISMS_7_6, ISMS_7_7, ISMS_7_8, ISMS_7_9, ISMS_7_10, ISMS_7_11, ISMS_7_12, ISMS_7_13, ISMS_7_14
 
 # モジュールと関数の対応表を辞書で作成
 modules = {
@@ -115,6 +103,12 @@ def main():
             selected_module.display_page()
             # 下部にも同じスタイルを適用して閉じる
             st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown(
+                """
+                <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+                """,
+                unsafe_allow_html=True
+            )
 
 if __name__ == "__main__":
     main()
