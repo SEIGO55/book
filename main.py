@@ -1649,11 +1649,9 @@ def main():
 
     # col2に各項目に対応するテキストを追加
     with col2:
-        for i in range(1, 15):
-            st.markdown(
-                f"""
-                <div style="min-height: 40px; display: flex; align-items: center;">
-                    7.{i}に関する説明文
+        st.markdown(
+            """<div style="min-height: 40px; display: flex; align-items: center;">
+                    情報及びその他の関連資産のある領域を保護するために、物理的セキュリティ境界を定め、かつ、用いることが望ましい。
                 </div>
                 """,
                 unsafe_allow_html=True
