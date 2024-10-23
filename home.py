@@ -3,6 +3,6 @@ import streamlit as st
 st.title("Home Page")
 st.write("これはホームページです。")
 
-import page3
+import section1
 
-page3.display_page()
+section1.display_page()
