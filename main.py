@@ -24,9 +24,7 @@ import ISMS_5_17
 ISMS_5_17.display_page()
 st.markdown("---")
 
-import streamlit as st
-import ISMS_7_1
-import ISMS_7_2
+import ISMS_7_1, ISMS_7_2
 import ISMS_7_3
 import ISMS_7_4
 import ISMS_7_5
@@ -106,17 +104,21 @@ def main():
     if 'selected_item' in st.session_state:
         selected_module = modules[st.session_state['selected_item']]
         with placeholder.container():
+            # 上部にスタイルを適用
             st.markdown(
                 """
                 <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
                 """,
                 unsafe_allow_html=True
             )
+            # モジュールのページを表示
             selected_module.display_page()
+            # 下部にも同じスタイルを適用して閉じる
             st.markdown("</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
+
 
 
 
