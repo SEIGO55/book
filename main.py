@@ -27,15 +27,23 @@ st.markdown("---")
 import streamlit as st
 import ISMS_7_1
 
+import streamlit as st
+import ISMS_7_1
+
 # Define the function to display the table with clickable buttons
 def main():
+    # Header
     st.markdown("<h3 style='text-align: center; background-color: #d3d3d3;'>物理的管理策の項目</h3>", unsafe_allow_html=True)
 
+    # Two columns for the table
     col1, col2 = st.columns(2)
+
+    # Initialize a placeholder for the dynamic content
+    placeholder = st.empty()
 
     with col1:
         if st.button("7.1 物理的セキュリティ境界"):
-            ISMS_7_1.display_page()
+            st.session_state['selected_item'] = '7.1'
         st.write("7.2 物理的入退")
         st.write("7.3 オフィス、部屋及び施設のセキュリティ")
         st.write("7.4 物理的なセキュリティの監視")
@@ -52,8 +60,15 @@ def main():
         st.write("7.13 装置の保守")
         st.write("7.14 装置のセキュリティを保った処分または再利用")
 
+    # Display the content dynamically below the table
+    if 'selected_item' in st.session_state:
+        with placeholder.container():
+            if st.session_state['selected_item'] == '7.1':
+                ISMS_7_1.display_page()
+
 if __name__ == "__main__":
     main()
+
 
 st.markdown("---")
 
