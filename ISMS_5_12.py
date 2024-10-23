@@ -2,7 +2,7 @@ import streamlit as st
 
 def display_page():
     st.markdown("""
-    <h1 style='font-size:18px; margin-bottom: 5px;'>8. 情報セキュリティ管理策</h1>
+    <h1 style='font-size:18px; margin-bottom: 5px;'>5.12 情報の分類</h1>
     """, unsafe_allow_html=True)
 
     st.markdown("""
