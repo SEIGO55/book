@@ -106,7 +106,14 @@ def main():
     if 'selected_item' in st.session_state:
         selected_module = modules[st.session_state['selected_item']]
         with placeholder.container():
+            st.markdown(
+                """
+                <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+                """,
+                unsafe_allow_html=True
+            )
             selected_module.display_page()
+            st.markdown("</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
