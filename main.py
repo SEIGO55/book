@@ -23,6 +23,35 @@ import ISMS_5_17
 ISMS_5_17.display_page()
 st.markdown("---")
 
+# Define the data for the table
+data = {
+    "Column 1": [
+        "7.1 物理的セキュリティ境界",
+        "7.2 物理的入退",
+        "7.3 オフィス、部屋及び施設のセキュリティ",
+        "7.4 物理的なセキュリティの監視",
+        "7.5 物理的及び環境的脅威からの保護",
+        "7.6 セキュリティを保つべき領域での作業",
+        "7.7 クリアデスク・クリアスクリーン"
+    ],
+    "Column 2": [
+        "7.8 装置の設置及び保護",
+        "7.9 域外にある資産のセキュリティ",
+        "7.10 記憶媒体",
+        "7.11 サポートユーティリティ",
+        "7.12 ケーブル配線のセキュリティ",
+        "7.13 装置の保守",
+        "7.14 装置のセキュリティを保った処分または再利用"
+    ]
+}
+
+# Convert to a DataFrame
+df = pd.DataFrame(data)
+
+# Display the static table using Streamlit
+st.table(df)
+st.markdown("---")
+
 import ISMS_7_1
 ISMS_7_1.display_page()
 st.markdown("---")
