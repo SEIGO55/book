@@ -1603,3 +1603,119 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("---")
+
+
+# モジュールと関数の対応表を辞書で作成
+modules = {
+    '7.1': ISMS_7_1,
+    '7.2': ISMS_7_2,
+    '7.3': ISMS_7_3,
+    '7.4': ISMS_7_4,
+    '7.5': ISMS_7_5,
+    '7.6': ISMS_7_6,
+    '7.7': ISMS_7_7,
+    '7.8': ISMS_7_8,
+    '7.9': ISMS_7_9,
+    '7.10': ISMS_7_10,
+    '7.11': ISMS_7_11,
+    '7.12': ISMS_7_12,
+    '7.13': ISMS_7_13,
+    '7.14': ISMS_7_14
+}
+
+import streamlit as st
+
+# テーブルとボタンを表示する関数
+def main():
+    # ヘッダーを表示
+    st.markdown("<h3 style='text-align: center; background-color: #d3d3d3;'>物理的管理策の項目</h3>", unsafe_allow_html=True)
+
+    # 3カラムで表示
+    col1, col2, col3 = st.columns(3)
+
+    # 動的コンテンツを表示するためのプレースホルダー
+    placeholder = st.empty()
+
+    # 各カラムにボタンとテキストを配置
+    with col1:
+        if st.button("7.1 物理的セキュリティ境界"):
+            st.session_state['selected_item'] = '7.1'
+        if st.button("7.2 物理的入退"):
+            st.session_state['selected_item'] = '7.2'
+        if st.button("7.3 オフィス、部屋及び施設のセキュリティ"):
+            st.session_state['selected_item'] = '7.3'
+        if st.button("7.4 物理的なセキュリティの監視"):
+            st.session_state['selected_item'] = '7.4'
+        if st.button("7.5 物理的及び環境的脅威からの保護"):
+            st.session_state['selected_item'] = '7.5'
+        if st.button("7.6 セキュリティを保つべき領域での作業"):
+            st.session_state['selected_item'] = '7.6'
+        if st.button("7.7 クリアデスク・クリアスクリーン"):
+            st.session_state['selected_item'] = '7.7'
+        if st.button("7.8 装置の設置及び保護"):
+            st.session_state['selected_item'] = '7.8'
+        if st.button("7.9 域外にある資産のセキュリティ"):
+            st.session_state['selected_item'] = '7.9'
+        if st.button("7.10 記憶媒体"):
+            st.session_state['selected_item'] = '7.10'
+        if st.button("7.11 サポートユーティリティ"):
+            st.session_state['selected_item'] = '7.11'
+        if st.button("7.12 ケーブル配線のセキュリティ"):
+            st.session_state['selected_item'] = '7.12'
+        if st.button("7.13 装置の保守"):
+            st.session_state['selected_item'] = '7.13'
+        if st.button("7.14 装置のセキュリティを保った処分または再利用"):
+            st.session_state['selected_item'] = '7.14'
+
+    # col2に各項目に対応するテキストを追加
+    with col2:
+        st.write("7.1に関する説明文")
+        st.write("7.2に関する説明文")
+        st.write("7.3に関する説明文")
+        st.write("7.4に関する説明文")
+        st.write("7.5に関する説明文")
+        st.write("7.6に関する説明文")
+        st.write("7.7に関する説明文")
+        st.write("7.8に関する説明文")
+        st.write("7.9に関する説明文")
+        st.write("7.10に関する説明文")
+        st.write("7.11に関する説明文")
+        st.write("7.12に関する説明文")
+        st.write("7.13に関する説明文")
+        st.write("7.14に関する説明文")
+
+    # col3に各項目に対応するテキストを追加
+    with col3:
+        st.write("7.1の追加情報")
+        st.write("7.2の追加情報")
+        st.write("7.3の追加情報")
+        st.write("7.4の追加情報")
+        st.write("7.5の追加情報")
+        st.write("7.6の追加情報")
+        st.write("7.7の追加情報")
+        st.write("7.8の追加情報")
+        st.write("7.9の追加情報")
+        st.write("7.10の追加情報")
+        st.write("7.11の追加情報")
+        st.write("7.12の追加情報")
+        st.write("7.13の追加情報")
+        st.write("7.14の追加情報")
+
+    # ボタンがクリックされたときに対応するモジュールのページを表示
+    if 'selected_item' in st.session_state:
+        selected_module = modules[st.session_state['selected_item']]
+        with placeholder.container():
+            # 上部にスタイルを適用
+            st.markdown(
+                """
+                <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+                """,
+                unsafe_allow_html=True
+            )
+            # モジュールのページを表示
+            selected_module.display_page()
+            # 下部にも同じスタイルを適用して閉じる
+            st.markdown("</div>", unsafe_allow_html=True)
+
+if __name__ == "__main__":
+    main()
