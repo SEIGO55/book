@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def display_page():
     st.markdown("# Section1")
