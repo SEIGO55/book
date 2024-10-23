@@ -1635,4 +1635,4 @@ data = [
 ]
 
 # Streamlitでテーブルを表示
-st.table(pd.DataFrame(data, columns=["標題", "管理策", "目的"]))
+st.table(pd.DataFrame(data, columns=["箇条","標題", "管理策", "目的"]))
