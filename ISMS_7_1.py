@@ -4,7 +4,6 @@ def display_page():
     st.markdown("""
     <div style='background-color: #ffe6e6; border: 1px solid #ffcccc; padding: 10px; border-radius: 5px;'>
         <h1 style='font-size:18px; margin-bottom: 5px;'>7.1 物理的セキュリティ境界（Physical Security Parameters）</h1>
-    </div>
     <details>
       <summary>1. 管理策 7.1 の概要</summary>
       <p>
@@ -44,6 +43,7 @@ def display_page():
       この標準の目的は、建物のために必要なセキュアエリアを定義し、それぞれのセキュアエリアをどのように区別するかのパラメーターを設定することです。フロアプランを使用して、公共エリアからデータセンターやサーバールームのような機密性が高くアクセスが制限されたエリアまで、必要な場所をハイライトし、適切なセキュリティ基準を設けることが推奨されます。
       </p>
     </details>
+    </div>
     """, unsafe_allow_html=True)
     
     # 実施手順（例）のセクション
