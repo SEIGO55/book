@@ -1,6 +1,8 @@
 import streamlit as st
 import plotly.graph_objects as go
 
+import 5_1
+5_1.display_page()
 
 ########################################################################################################################################
 st.markdown("""
