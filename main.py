@@ -1623,6 +1623,7 @@ modules = {
     '7.14': ISMS_7_14
 }
 
+
 # テーブルとボタンを表示する関数
 def main():
     # ヘッダーを表示
@@ -1636,68 +1637,39 @@ def main():
 
     # 各カラムにボタンとテキストを配置
     with col1:
-        if st.button("7.1 物理的セキュリティ境界", key="button_7.1"):
-            st.session_state['selected_item'] = '7.1'
-        if st.button("7.2 物理的入退", key="button_7.2"):
-            st.session_state['selected_item'] = '7.2'
-        if st.button("7.3 オフィス、部屋及び施設のセキュリティ", key="button_7.3"):
-            st.session_state['selected_item'] = '7.3'
-        if st.button("7.4 物理的なセキュリティの監視", key="button_7.4"):
-            st.session_state['selected_item'] = '7.4'
-        if st.button("7.5 物理的及び環境的脅威からの保護", key="button_7.5"):
-            st.session_state['selected_item'] = '7.5'
-        if st.button("7.6 セキュリティを保つべき領域での作業", key="button_7.6"):
-            st.session_state['selected_item'] = '7.6'
-        if st.button("7.7 クリアデスク・クリアスクリーン", key="button_7.7"):
-            st.session_state['selected_item'] = '7.7'
-        if st.button("7.8 装置の設置及び保護", key="button_7.8"):
-            st.session_state['selected_item'] = '7.8'
-        if st.button("7.9 域外にある資産のセキュリティ", key="button_7.9"):
-            st.session_state['selected_item'] = '7.9'
-        if st.button("7.10 記憶媒体", key="button_7.10"):
-            st.session_state['selected_item'] = '7.10'
-        if st.button("7.11 サポートユーティリティ", key="button_7.11"):
-            st.session_state['selected_item'] = '7.11'
-        if st.button("7.12 ケーブル配線のセキュリティ", key="button_7.12"):
-            st.session_state['selected_item'] = '7.12'
-        if st.button("7.13 装置の保守", key="button_7.13"):
-            st.session_state['selected_item'] = '7.13'
-        if st.button("7.14 装置のセキュリティを保った処分または再利用", key="button_7.14"):
-            st.session_state['selected_item'] = '7.14'
+        for i in range(1, 15):
+            st.markdown(
+                f"""
+                <div style="min-height: 40px; display: flex; align-items: center;">
+                    <button style="width: 100%; padding: 5px;">7.{i} ボタンテキスト</button>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     # col2に各項目に対応するテキストを追加
     with col2:
-        st.write("7.1に関する説明文")
-        st.write("7.2に関する説明文")
-        st.write("7.3に関する説明文")
-        st.write("7.4に関する説明文")
-        st.write("7.5に関する説明文")
-        st.write("7.6に関する説明文")
-        st.write("7.7に関する説明文")
-        st.write("7.8に関する説明文")
-        st.write("7.9に関する説明文")
-        st.write("7.10に関する説明文")
-        st.write("7.11に関する説明文")
-        st.write("7.12に関する説明文")
-        st.write("7.13に関する説明文")
-        st.write("7.14に関する説明文")
+        for i in range(1, 15):
+            st.markdown(
+                f"""
+                <div style="min-height: 40px; display: flex; align-items: center;">
+                    7.{i}に関する説明文
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     # col3に各項目に対応するテキストを追加
     with col3:
-        st.write("7.1の追加情報")
-        st.write("7.2の追加情報")
-        st.write("7.3の追加情報")
-        st.write("7.4の追加情報")
-        st.write("7.5の追加情報")
-        st.write("7.6の追加情報")
-        st.write("7.7の追加情報")
-        st.write("7.8の追加情報")
-        st.write("7.9の追加情報")
-        st.write("7.10の追加情報")
-        st.write("7.11の追加情報")
-        st.write("7.12の追加情報")
-        st.write("7.13の追加情報")
-        st.write("7.14の追加情報")
+        for i in range(1, 15):
+            st.markdown(
+                f"""
+                <div style="min-height: 40px; display: flex; align-items: center;">
+                    7.{i}の追加情報
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     # ボタンがクリックされたときに対応するモジュールのページを表示
     if 'selected_item' in st.session_state:
