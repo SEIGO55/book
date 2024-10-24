@@ -1642,3 +1642,6 @@ df.set_index("箇条", inplace=True)
 
 # Streamlitでテーブルを表示
 st.table(df)
+
+import 世界で進むAIの安全性確保と法整備.py
+世界で進むAIの安全性確保と法整備.display_page()
