@@ -63,6 +63,24 @@ def display_page():
         </div>
     </div>
     """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
+        <div style="font-size:12px; line-height:1.5;">
+        <details>
+          <summary style='font-size:16px; font-weight: bold;'>"実施手順（例）"</summary>
+          <p>
+          XXXX
+          </p>
+        </details>
+        <details>
+          <summary style='font-size:16px; font-weight: bold;'>"ワンポイントアドバイス"</summary>
+          <p>
+          XXXX
+          </p>
+        </details>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # 関数を呼び出してページを表示
 display_page()
