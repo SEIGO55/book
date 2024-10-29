@@ -47,7 +47,6 @@ def display_page():
           このように、必要な人だけがアクセスできるよう情報の管理を徹底します。
           </p>
         </details>
-        </div>
     </div>
         """, unsafe_allow_html=True)
     st.markdown("""
