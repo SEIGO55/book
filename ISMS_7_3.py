@@ -48,7 +48,7 @@ def display_page():
           </p>
         </details>
     </div>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     st.markdown("""
     <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 5px solid #2196f3; margin-top: 15px; margin-bottom: 0px;">
         <div style="font-size:12px; line-height:1.5;">
