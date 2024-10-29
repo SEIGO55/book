@@ -13,7 +13,6 @@ def display_page():
           無許可の人物の侵入を防ぎ、資産への潜在的な損害や業務の妨害を防止することが主な目標です。
           </p>
         </details>
-
         <details>
           <summary>2. 重要施設の立地選定（ロケーションの重要性）</summary>
           <p>
@@ -21,7 +20,6 @@ def display_page():
           これにより、無許可の人が近づきにくくなり、リスクが軽減されます。具体的には、目立たない場所に設置することで、不正なアクセスの可能性を低くすることが目的です。
           </p>
         </details>
-    
         <details>
           <summary>3. 施設の可視性を抑える（目立たない設計）</summary>
           <p>
@@ -30,7 +28,6 @@ def display_page():
           これにより、不正行為を目的とした者からの標的化を防ぎます。
           </p>
         </details>
-    
         <details>
           <summary>4. 施設内部の配置（プライバシーの確保）</summary>
           <p>
@@ -38,7 +35,6 @@ def display_page():
           これにより、情報が物理的にも、視覚的・聴覚的にも安全に保たれます。
           </p>
         </details>
-    
         <details>
           <summary>5. 施設情報の管理</summary>
           <p>
