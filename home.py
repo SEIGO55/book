@@ -2,6 +2,10 @@ import streamlit as st
 from gtts import gTTS
 import os
 
+# 各スライド画像のファイルパスを確認する
+for image in slide_images:
+    print("Image path exists:", os.path.exists(image))
+    
 st.title("Home Page")
 st.write("これはホームページです。")
 
