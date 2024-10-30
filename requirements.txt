@@ -8,3 +8,4 @@ bibtexparser
 gtts
 pymupdf
 pydub
+ffmpeg
