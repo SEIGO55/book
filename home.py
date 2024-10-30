@@ -2,16 +2,23 @@ import streamlit as st
 from gtts import gTTS
 import os
 
-# 各スライド画像のファイルパスを確認する
-for image in slide_images:
-    print("Image path exists:", os.path.exists(image))
-    
-st.title("Home Page")
-st.write("これはホームページです。")
+import streamlit as st
+from PIL import Image
 
-# スライド画像と音声ファイルのディレクトリパス
+# スライド画像を保存するディレクトリを指定
 output_dir = "./slides"
-os.makedirs(output_dir, exist_ok=True)
+# スライド画像を読み込むパスを指定（例: slides フォルダ内に画像が保存されている前提）
+slide_images = [f"{output_dir}/slide_{i+1}.png" for i in range(3)]  # スライドの数に合わせて調整
+
+# 各画像が存在するか確認
+for image_path in slide_images:
+    st.write("Image path exists:", image_path)  # デバッグ用にファイルパスを表示
+
+# スライドのインデックスに基づいて画像を表示
+if slide_images:
+    st.image(slide_images[0], use_column_width=True)
+else:
+    st.write("No slide images found.")
 
 # 各スライドに対応するテキスト
 slide_texts = ["スライド1の内容です", "スライド2の内容です", "最後のスライドです"]
