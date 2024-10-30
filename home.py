@@ -1,6 +1,7 @@
 import streamlit as st
 import fitz  # PyMuPDF
 from gtts import gTTS
+from pydub import AudioSegment
 import os
 
 # PDFファイルのパス
@@ -24,7 +25,7 @@ if os.path.exists(script_file):
     with open(script_file, "r", encoding="utf-8") as file:
         page_script = file.read()
 else:
-    page_script = "音声はありません。"
+    page_script = "スクリプトが見つかりません。"
 
 # PDFのページ数を取得
 with fitz.open(pdf_path) as pdf_document:
@@ -38,15 +39,22 @@ with fitz.open(pdf_path) as pdf_document:
     st.image(image, caption=f"Page {st.session_state.page_number + 1} / {num_pages}")
 
 # 音声ファイルのパス
-audio_file = f"{audio_dir}/page_{st.session_state.page_number + 1}.mp3"
+original_audio_file = f"{audio_dir}/page_{st.session_state.page_number + 1}.mp3"
+adjusted_audio_file = f"{audio_dir}/page_{st.session_state.page_number + 1}_1.25x.mp3"
 
 # 音声ファイルが存在しない場合、gTTSで生成
-if not os.path.exists(audio_file):
+if not os.path.exists(original_audio_file):
     tts = gTTS(text=page_script, lang='ja')
-    tts.save(audio_file)
+    tts.save(original_audio_file)
+
+# 音声ファイルの速度を1.25倍に調整
+if not os.path.exists(adjusted_audio_file):
+    audio = AudioSegment.from_file(original_audio_file)
+    audio = audio.speedup(playback_speed=1.25)
+    audio.export(adjusted_audio_file, format="mp3")
 
 # 音声の自動再生
-st.audio(audio_file, autoplay=True)
+st.audio(adjusted_audio_file, autoplay=True)
 
 # ページ遷移ボタン
 col1, col2, col3 = st.columns([1, 1, 1])
