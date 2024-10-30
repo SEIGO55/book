@@ -6,6 +6,4 @@ plotly
 Pillow
 bibtexparser
 gtts
-pdf2image
-simpleaudio
 
