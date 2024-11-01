@@ -3,6 +3,21 @@ import fitz  # PyMuPDF
 from gtts import gTTS
 import os
 
+# main.py
+
+import streamlit as st
+from english1 import display_lesson  # english1.pyから関数をインポート
+
+# アプリのメイン関数
+def main():
+    st.title("AI英語レッスンアプリ")
+    display_lesson()  # display_lesson 関数を呼び出して内容を表示
+
+# Streamlitアプリの実行
+if __name__ == "__main__":
+    main()
+
+
 # PDFファイルのパス
 pdf_path = "./DX-9.pdf"
 
