@@ -1,51 +1,49 @@
+# english1.py
+
 import streamlit as st
 
-# Streamlit アプリのタイトルと説明
-st.title("AI英語レッスン")
-st.write("このアプリでは、英語の読み上げ、Key単語の説明、日本語解説、英語の再読み上げを順番に学べます。")
+def display_lesson():
+    # レッスンの内容
+    lesson_content = {
+        "English Text": """Artificial intelligence (AI) is transforming our world. This suite of technologies offers tremendous potential for good, from opening new areas of scientific inquiry and optimizing energy grids, to improving public health and agriculture and promoting broader progress on the Sustainable Development Goals (SDGs).
+        
+        Left ungoverned, however, AI’s opportunities may not manifest or be distributed equitably. Widening digital divides could limit the benefits of AI to a handful of States, companies, and individuals. Missed uses – failing to take advantage of and share AI-related benefits because of lack of trust or missing enablers such as capacity gaps and ineffective governance – could limit the opportunity envelope.
+        
+        AI also brings other risks. AI bias and surveillance are joined by newer concerns, such as the confabulations (or “hallucinations”) of large language models, AI-enhanced creation and dissemination of disinformation, risks to peace and security, and the energy consumption of AI systems at a time of climate crisis.
+        
+        Fast, opaque, and autonomous AI systems challenge traditional regulatory systems, while ever-more-powerful systems could upend the world of work. Autonomous weapons and public security uses of AI raise serious legal, security, and humanitarian questions.
+        
+        There is, today, a global governance deficit with respect to AI. Despite much discussion of ethics and principles, the patchwork of norms and institutions is still nascent and full of gaps. Accountability is often notable for its absence, including for deploying non-explainable AI systems that impact others. Compliance often rests on voluntarism; practice belies rhetoric.
+        
+        As noted in our interim report, AI governance is crucial – not merely to address the challenges and risks, but also to ensure that we harness AI’s potential in ways that leave no one behind.""",
+        
+        "Key Terms": {
+            "Transforming": "変革する - 大きく変える、進化させる",
+            "Potential": "可能性 - 潜在的な力や未来の可能性",
+            "Sustainable Development Goals (SDGs)": "持続可能な開発目標 - 国連が掲げた17の目標",
+            "Equitably": "公平に - 平等や公正な分配",
+            "Capacity Gaps": "能力のギャップ - 能力やリソースの不足",
+            "Confabulations": "臆説、幻覚 - AIが事実でない情報を創り出す現象",
+            "Governance": "ガバナンス - 規範や規制を通じた管理",
+            "Accountability": "説明責任 - 行動や決定に対する責任",
+            "Compliance": "コンプライアンス - 法令や規範の順守",
+            "Leave no one behind": "誰一人取り残さない - SDGsの理念で、全ての人に平等な機会を"
+        },
+        
+        "Japanese Explanation": """人工知能（AI）は現在、私たちの生活や社会の多くの分野に影響を与えており、新たな科学分野の開拓やエネルギーの効率化、農業や公衆衛生の向上など、持続可能な開発目標（SDGs）の達成に寄与しています。しかし、AIの可能性が公平に分配されなかったり、適切に管理されなかったりすると、その恩恵が限られた人々や企業にしか届かないリスクがあります。また、AIには偏りや監視、誤情報の拡散、エネルギー消費などのリスクも存在し、それに対するガバナンスの欠如が課題です。AIのガバナンスは、これらのリスクに対処しつつ、全ての人がその恩恵を受けられる形で活用するために非常に重要です。"""
+    }
 
-# レッスンの内容
-lesson_content = {
-    "English Text": """Artificial intelligence (AI) is transforming our world. This suite of technologies offers tremendous potential for good, from opening new areas of scientific inquiry and optimizing energy grids, to improving public health and agriculture and promoting broader progress on the Sustainable Development Goals (SDGs).
+    # 各ステップの表示
+    st.header("Step 1: 英語の読み上げ")
+    st.text(lesson_content["English Text"])
 
-Left ungoverned, however, AI’s opportunities may not manifest or be distributed equitably. Widening digital divides could limit the benefits of AI to a handful of States, companies, and individuals. Missed uses – failing to take advantage of and share AI-related benefits because of lack of trust or missing enablers such as capacity gaps and ineffective governance – could limit the opportunity envelope.
+    st.header("Step 2: Key 単語の説明")
+    for term, definition in lesson_content["Key Terms"].items():
+        st.write(f"**{term}**: {definition}")
 
-AI also brings other risks. AI bias and surveillance are joined by newer concerns, such as the confabulations (or “hallucinations”) of large language models, AI-enhanced creation and dissemination of disinformation, risks to peace and security, and the energy consumption of AI systems at a time of climate crisis.
+    st.header("Step 3: 日本語での全体的な解説")
+    st.write(lesson_content["Japanese Explanation"])
 
-Fast, opaque, and autonomous AI systems challenge traditional regulatory systems, while ever-more-powerful systems could upend the world of work. Autonomous weapons and public security uses of AI raise serious legal, security, and humanitarian questions.
+    st.header("Step 4: 英語の再読み上げ")
+    st.text(lesson_content["English Text"])
 
-There is, today, a global governance deficit with respect to AI. Despite much discussion of ethics and principles, the patchwork of norms and institutions is still nascent and full of gaps. Accountability is often notable for its absence, including for deploying non-explainable AI systems that impact others. Compliance often rests on voluntarism; practice belies rhetoric.
-
-As noted in our interim report, AI governance is crucial – not merely to address the challenges and risks, but also to ensure that we harness AI’s potential in ways that leave no one behind.""",
-    
-    "Key Terms": {
-        "Transforming": "変革する - 大きく変える、進化させる",
-        "Potential": "可能性 - 潜在的な力や未来の可能性",
-        "Sustainable Development Goals (SDGs)": "持続可能な開発目標 - 国連が掲げた17の目標",
-        "Equitably": "公平に - 平等や公正な分配",
-        "Capacity Gaps": "能力のギャップ - 能力やリソースの不足",
-        "Confabulations": "臆説、幻覚 - AIが事実でない情報を創り出す現象",
-        "Governance": "ガバナンス - 規範や規制を通じた管理",
-        "Accountability": "説明責任 - 行動や決定に対する責任",
-        "Compliance": "コンプライアンス - 法令や規範の順守",
-        "Leave no one behind": "誰一人取り残さない - SDGsの理念で、全ての人に平等な機会を"
-    },
-    
-    "Japanese Explanation": """人工知能（AI）は現在、私たちの生活や社会の多くの分野に影響を与えており、新たな科学分野の開拓やエネルギーの効率化、農業や公衆衛生の向上など、持続可能な開発目標（SDGs）の達成に寄与しています。しかし、AIの可能性が公平に分配されなかったり、適切に管理されなかったりすると、その恩恵が限られた人々や企業にしか届かないリスクがあります。また、AIには偏りや監視、誤情報の拡散、エネルギー消費などのリスクも存在し、それに対するガバナンスの欠如が課題です。AIのガバナンスは、これらのリスクに対処しつつ、全ての人がその恩恵を受けられる形で活用するために非常に重要です。"""
-}
-
-# 各ステップの表示
-st.header("Step 1: 英語の読み上げ")
-st.text(lesson_content["English Text"])
-
-st.header("Step 2: Key 単語の説明")
-for term, definition in lesson_content["Key Terms"].items():
-    st.write(f"**{term}**: {definition}")
-
-st.header("Step 3: 日本語での全体的な解説")
-st.write(lesson_content["Japanese Explanation"])
-
-st.header("Step 4: 英語の再読み上げ")
-st.text(lesson_content["English Text"])
-
-# ボタンを押すことで各ステップに進む機能を追加できます
