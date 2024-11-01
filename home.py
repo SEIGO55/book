@@ -3,17 +3,19 @@ import fitz  # PyMuPDF
 from gtts import gTTS
 import os
 
-# main.py
+# home.py
+import sys
+from pathlib import Path
 
-import streamlit as st
+# カレントディレクトリをパスに追加
+sys.path.append(str(Path(__file__).parent))
+
 from english1 import display_lesson  # english1.pyから関数をインポート
 
-# アプリのメイン関数
 def main():
     st.title("AI英語レッスンアプリ")
-    display_lesson()  # display_lesson 関数を呼び出して内容を表示
+    display_lesson()
 
-# Streamlitアプリの実行
 if __name__ == "__main__":
     main()
 
