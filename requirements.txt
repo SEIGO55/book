@@ -9,3 +9,4 @@ gtts
 pymupdf
 pydub
 ffmpeg
+Path
